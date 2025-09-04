@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - The Growth Navigator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="w-full max-w-sm mx-auto p-6 bg-white rounded-3xl shadow-xl">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">
+                Masuk ke <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-transparent bg-clip-text">The Growth Navigator</span>
+            </h1>
+            <p class="text-sm text-gray-500 mt-2">Masuk dengan akun Anda untuk melanjutkan.</p>
+        </div>
+
+        <!-- Form Login -->
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" class="mt-1 block w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan username Anda" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="mt-1 block w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan password Anda" required>
+            </div>
+            <button type="submit" id="login-button" class="w-full bg-blue-500 text-white p-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition-colors">
+                Masuk
+            </button>
+            <div id="error-message" class="text-center text-red-500 text-sm mt-2 hidden"></div>
+        </form>
+        <p class="text-center text-sm text-gray-500 mt-4">
+            Untuk demo, klik "Masuk" tanpa mengisi apa pun.
+        </p>
+
+    </div>
+
+    <script type="module">
+        // This is a dummy script for demo purposes.
+        // It will redirect to the main page on form submission.
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
