@@ -125,18 +125,17 @@
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <a href="#home" class="flex items-center space-x-2">
                 <i class="fas fa-seedling text-3xl text-green-500"></i>
                 <span class="text-xl font-bold text-gray-800">The Growth Navigator</span>
-            </div>
+            </a>
             <nav class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-gray-600 hover:text-green-500 transition-colors">Beranda</a>
                 <a href="#about-stunting" class="text-gray-600 hover:text-green-500 transition-colors">Apa itu Stunting?</a>
                 <a href="#prevention" class="text-gray-600 hover:text-green-500 transition-colors">Pencegahan</a>
                 <a href="#data-input" class="text-gray-600 hover:text-green-500 transition-colors">Isi Data</a>
                 <a href="#features" class="text-gray-600 hover:text-green-500 transition-colors">Fitur</a>
                 <a href="#stunting-data" class="text-gray-600 hover:text-green-500 transition-colors">Data Stunting</a>
-                <a href="#calendar-section" class="text-gray-600 hover:text-green-500 transition-colors">Kalender</a>
+                <a href="buatjanji.html" class="text-gray-600 hover:text-green-500 transition-colors">Buat Janji Temu</a>
                 <a href="#news-section" class="text-gray-600 hover:text-green-500 transition-colors">Berita</a>
             </nav>
             <button class="md:hidden text-gray-600 text-2xl">
@@ -405,9 +404,9 @@
                         <p>Waktu: 10:00 AM</p>
                         <p>Lokasi: Puskesmas Tumbuh Sehat</p>
                     </div>
-                    <button class="w-full bg-teal-500 text-white py-2 rounded-full font-semibold hover:bg-teal-600 transition-colors">
+                    <a href="buatjanji.html" class="w-full inline-block text-center bg-teal-500 text-white py-2 rounded-full font-semibold hover:bg-teal-600 transition-colors">
                         Tambah Janji Temu Baru
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -643,16 +642,15 @@
     <script>
         const ctx = document.getElementById('stuntingChart').getContext('2d');
         const stuntingChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: ['2013', '2018', '2019', '2021', '2022', '2023', '2024'],
                 datasets: [{
                     label: 'Prevalensi Stunting (%)',
                     data: [37.2, 30.8, 27.7, 24.4, 21.6, 21.5, 19.8],
+                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
                     borderColor: 'rgb(59, 130, 246)',
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    fill: true,
-                    tension: 0.4
+                    borderWidth: 1
                 }]
             },
             options: {
@@ -732,7 +730,6 @@
         document.querySelectorAll('.animated-card').forEach(card => {
             observer.observe(card);
         });
-
     </script>
 </body>
 </html>
