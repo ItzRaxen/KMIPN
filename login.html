@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - The Growth Navigator</title>
+    <title>Login - THE SMART COMPASS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #F8F9FA;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
         .text-gradient {
+            background-image: linear-gradient(to right, #00A693, #00C9A7);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -27,7 +28,7 @@
     <div class="w-full max-w-sm mx-auto p-6 bg-white rounded-3xl shadow-xl">
         <div class="text-center mb-6">
             <h1 class="text-3xl font-bold text-gray-800">
-                Masuk ke <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-transparent bg-clip-text">The Growth Navigator</span>
+                Masuk ke <span class="text-gradient">THE SMART COMPASS</span>
             </h1>
             <p class="text-sm text-gray-500 mt-2">Masuk dengan akun Anda untuk melanjutkan.</p>
         </div>
@@ -35,21 +36,21 @@
         <!-- Form Login -->
         <form id="login-form" class="space-y-4">
             <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Username</label>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
                 <input type="text" id="username" name="username" class="mt-1 block w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan username Anda" required>
             </div>
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input type="password" id="password" name="password" class="mt-1 block w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan password Anda" required>
             </div>
-            <button type="submit" id="login-button" class="w-full bg-blue-500 text-white p-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition-colors">
+            <button type="submit" id="login-button" class="w-full bg-gradient-to-r from-teal-400 to-green-500 text-white p-3 rounded-full font-semibold shadow-lg hover:from-teal-500 hover:to-green-600 transition-colors">
                 Masuk
             </button>
             <div id="error-message" class="text-center text-red-500 text-sm mt-2 hidden"></div>
         </form>
-        <p class="text-center text-sm text-gray-500 mt-4">
+        <!-- <p class="text-center text-sm text-gray-500 mt-4">
             Untuk demo, klik "Masuk" tanpa mengisi apa pun.
-        </p>
+        </p> -->
 
     </div>
 
